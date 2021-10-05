@@ -58,7 +58,7 @@ function initializeLiff(myLiffId) {
             document.getElementById("liffInitErrorMessage").classList.remove('hidden');
         });
 }
-console.log("init")
+
 /**
  * 個々のアプリコンポーネントを処理する関数を呼び出して、アプリを初期化します
  */
@@ -74,7 +74,7 @@ function initializeApp() {
         document.getElementById('liffLogoutButton').disabled = true;
     }
 }
-console.log("init")
+
 /**
 * LIFFメソッドを呼び出して生成されたデータを表示する
 */
@@ -86,7 +86,7 @@ function displayLiffData() {
     document.getElementById('isLoggedIn').textContent = liff.isLoggedIn();
     document.getElementById('deviceOS').textContent = liff.getOS();
 }
-console.log("init")
+
 /**
 * Toggle the login/logout buttons based on the isInClient status, and display a message accordingly
 */
@@ -137,7 +137,7 @@ function registerButtonHandlers() {
             });
         }
     });
-
+    console.log("init")
     //get ID token
     // document.getElementById('getIDToken').addEventListener('click',function(){
     //     if (!liff.isLoggedIn() && !liff.isInClient()){

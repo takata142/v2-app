@@ -148,6 +148,7 @@ function registerButtonHandlers() {
                 })
                 .then(() =>{
                     const idToken = liff.getIDToken();
+                    console.log(idToken)
                     document.getElementById('idTokenField').textContent = idToken;
                     toggleIdToken();
                 })

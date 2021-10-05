@@ -53,8 +53,6 @@ function initializeLiff(myLiffId) {
             initializeApp();
             const idToken = liff.getIDToken();
             console.log(idToken);
-            document.getElementById('idTokenField').textContent = idToken;
-            toggleIdToken();
         })
         .catch((err) => {
             document.getElementById("liffAppContent").classList.add('hidden');

@@ -137,7 +137,7 @@ function registerButtonHandlers() {
             });
         }
     });
-    console.log("init")
+ 
     //get ID token
     // document.getElementById('getIDToken').addEventListener('click',function(){
     //     if (!liff.isLoggedIn() && !liff.isInClient()){
@@ -169,7 +169,7 @@ function registerButtonHandlers() {
             toggleAccessToken();
         }
     });
-    console.log("init")
+ 
     // get profile call
     document.getElementById('getProfileButton').addEventListener('click', function() {
         liff.getProfile().then(function(profile) {
@@ -223,7 +223,7 @@ function registerButtonHandlers() {
         }
     });
 }
-
+console.log("init")
 /**
 * Alert the user if LIFF is opened in an external browser and unavailable buttons are tapped
 */

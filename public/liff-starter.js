@@ -25,6 +25,7 @@ window.onload = function() {
         initializeLiffOrDie(myLiffId);
     }
 };
+console.log("init")
 
 /**
 * Check if myLiffId is null. If null do not initiate liff.
@@ -38,7 +39,7 @@ function initializeLiffOrDie(myLiffId) {
         initializeLiff(myLiffId);
     }
 }
-
+console.log("init")
 /**
 * Initialize LIFF
 * @param {string} myLiffId The LIFF ID of the selected element
@@ -57,7 +58,7 @@ function initializeLiff(myLiffId) {
             document.getElementById("liffInitErrorMessage").classList.remove('hidden');
         });
 }
-
+console.log("init")
 /**
  * 個々のアプリコンポーネントを処理する関数を呼び出して、アプリを初期化します
  */

@@ -224,9 +224,9 @@ function sendAlertIfNotInClient() {
     alert('This button is unavailable as LIFF is currently being opened in an external browser.');
 }
 
-// function toggleIdToken(){
-//     toggleElement('idTokenData')
-// }
+function toggleIdToken(){
+    toggleElement('idTokenData')
+}
 
 /**
 * Toggle access token data field

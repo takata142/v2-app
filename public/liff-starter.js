@@ -25,7 +25,7 @@ window.onload = function() {
         initializeLiffOrDie(myLiffId);
     }
 };
-console.log("init")
+
 
 /**
 * Check if myLiffId is null. If null do not initiate liff.
@@ -39,7 +39,7 @@ function initializeLiffOrDie(myLiffId) {
         initializeLiff(myLiffId);
     }
 }
-console.log("init")
+
 /**
 * Initialize LIFF
 * @param {string} myLiffId The LIFF ID of the selected element
@@ -74,7 +74,7 @@ function initializeApp() {
         document.getElementById('liffLogoutButton').disabled = true;
     }
 }
-
+console.log("init")
 /**
 * LIFFメソッドを呼び出して生成されたデータを表示する
 */
@@ -86,7 +86,7 @@ function displayLiffData() {
     document.getElementById('isLoggedIn').textContent = liff.isLoggedIn();
     document.getElementById('deviceOS').textContent = liff.getOS();
 }
-
+console.log("init")
 /**
 * Toggle the login/logout buttons based on the isInClient status, and display a message accordingly
 */
@@ -100,7 +100,7 @@ function displayIsInClientInfo() {
         document.getElementById('shareTargetPicker').classList.toggle('hidden');
     }
 }
-
+console.log("init")
 /**
 * Register event handlers for the buttons displayed in the app
 */
@@ -169,7 +169,7 @@ function registerButtonHandlers() {
             toggleAccessToken();
         }
     });
-
+    console.log("init")
     // get profile call
     document.getElementById('getProfileButton').addEventListener('click', function() {
         liff.getProfile().then(function(profile) {

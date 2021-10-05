@@ -138,23 +138,25 @@ function registerButtonHandlers() {
     });
 
     //get ID token
-    document.getElementById('getIDToken').addEventListener('click',function(){
-        if (!liff.isLoggedIn() && !liff.isInClient()){
-            alert('To get an ID token, you need to be logged in. Please tap the "login" button below and try again.')
-        }else{
-            liff
-                .init({
-                    liffId:myLiffId
-                })
-                .then(() =>{
-                    const idToken = liff.getIDToken();
-                    console.log(idToken)
-                    document.getElementById('idTokenField').textContent = idToken;
-                    toggleIdToken();
-                })
-            
-        }
-    })
+    // document.getElementById('getIDToken').addEventListener('click',function(){
+    //     if (!liff.isLoggedIn() && !liff.isInClient()){
+    //         alert('To get an ID token, you need to be logged in. Please tap the "login" button below and try again.')
+    //     }else{
+    //         // liff
+    //         //     .init({
+    //         //         liffId:myLiffId
+    //         //     })
+    //         //     .then(() =>{
+    //         //         const idToken = liff.getIDToken();
+    //         //         console.log(idToken)
+    //         //         document.getElementById('idTokenField').textContent = idToken;
+    //         //         toggleIdToken();
+    //         //     })
+    //         const idToken = liff.getIDToken();
+    //         document.getElementById('idTokenField').textContent = idToken;
+    //         toggleIdToken();
+    //     }
+    // })
 
     // get access token
     document.getElementById('getAccessToken').addEventListener('click', function() {
@@ -226,11 +228,11 @@ function registerButtonHandlers() {
 */
 function sendAlertIfNotInClient() {
     alert('This button is unavailable as LIFF is currently being opened in an external browser.');
-}
+ }
 
-function toggleIdToken(){
-    toggleElement('idTokenData')
-}
+// function toggleIdToken(){
+//     toggleElement('idTokenData')
+// }
 
 /**
 * Toggle access token data field

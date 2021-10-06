@@ -124,20 +124,20 @@ function registerButtonHandlers() {
     });
 
     // sendMessages call
-    document.getElementById('sendMessageButton').addEventListener('click', function() {
-        if (!liff.isInClient()) {
-            sendAlertIfNotInClient();
-        } else {
-            liff.sendMessages([{
-                'type': 'text',
-                'text': "You've successfully sent a message! Hooray!"
-            }]).then(function() {
-                window.alert('Message sent');
-            }).catch(function(error) {
-                window.alert('Error sending message: ' + error);
-            });
-        }
-    });
+    // document.getElementById('sendMessageButton').addEventListener('click', function() {
+    //     if (!liff.isInClient()) {
+    //         sendAlertIfNotInClient();
+    //     } else {
+    //         liff.sendMessages([{
+    //             'type': 'text',
+    //             'text': "You've successfully sent a message! Hooray!"
+    //         }]).then(function() {
+    //             window.alert('Message sent');
+    //         }).catch(function(error) {
+    //             window.alert('Error sending message: ' + error);
+    //         });
+    //     }
+    // });
 
     // get access token
     document.getElementById('getAccessToken').addEventListener('click', function() {
@@ -155,7 +155,6 @@ function registerButtonHandlers() {
         if (!liff.isLoggedIn() && !liff.isInClient()){
             alert('To get an ID token, you need to be logged in. Please tap the "login" button below and try again.')
         }else{
-            
             const idToken = liff.getIDToken();
             console.log(idToken);
             document.getElementById('idTokenField').textContent = idToken;

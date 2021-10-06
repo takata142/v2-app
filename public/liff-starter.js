@@ -51,8 +51,8 @@ function initializeLiff(myLiffId) {
         .then(() => {
             // start to use LIFF's api
             initializeApp();
-            // const idToken = liff.getIDToken();
-            // console.log(idToken);
+            const idToken = liff.getIDToken();
+            console.log(idToken);
         })
         .catch((err) => {
             document.getElementById("liffAppContent").classList.add('hidden');

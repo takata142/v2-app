@@ -15,3 +15,7 @@ app.use('/api',(req,res)=> getUserInfo(req,res))
 
 app.listen(port, () => console.log(`app listening on port ${port}!`));
 
+const getUserInfo = (req,res) => {
+    const data = req.body;
+    console.log('id_token:',data.id_token);
+   }

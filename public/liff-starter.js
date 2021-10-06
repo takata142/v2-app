@@ -56,6 +56,7 @@ function initializeLiff(myLiffId) {
             const jsonData = JSON.stringify({
                 id_token:idToken
             });
+            console.log(jsonData)
             fetch('/api',{
                 method: 'POST',
                 headers: {

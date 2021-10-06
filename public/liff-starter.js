@@ -269,7 +269,3 @@ function toggleElement(elementId) {
     }
 }
 
-const getUserInfo = (req,res) => {
-    const data = req.body;
-    console.log('id_token:',data.id_token);
-   }

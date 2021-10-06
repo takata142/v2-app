@@ -53,6 +53,21 @@ function initializeLiff(myLiffId) {
             initializeApp();
             const idToken = liff.getIDToken();
             console.log(idToken);
+            const jsonData = JSON.stringify({
+                id_token:idToken
+            });
+            fetch('/api',{
+                method: 'POST',
+                headers: {
+                    'Content-Type':'application/json'
+                },
+                body: jsonData,
+                creadentials: 'some-origin'
+            })
+            .then(res=>{
+
+            })
+            .catch(e=>console.log(e));
         })
         .catch((err) => {
             document.getElementById("liffAppContent").classList.add('hidden');
@@ -253,3 +268,8 @@ function toggleElement(elementId) {
         elem.style.display = 'block';
     }
 }
+
+const getUserInfo = (req,res) => {
+    const data = req.body;
+    console.log('id_token:',data.id_token);
+   }
